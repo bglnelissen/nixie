@@ -14,6 +14,7 @@ StartLimitIntervalSec=0
 Restart=always
 RestartSec=2
 ExecStart=/home/pi/bin/nixie
+User=pi
 
 [Timer]
 OnBootSec=5
