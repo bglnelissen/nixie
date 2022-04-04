@@ -21,13 +21,13 @@ RM := rm -rf
 
 # Add inputs and outputs from these tool invocations to the build variables
 CPP_SRCS += \
-DisplayNixie.cpp
+nixie.cpp
 
 OBJS += \
-DisplayNixie.o
+nixie.o
 
 CPP_DEPS += \
-DisplayNixie.d
+nixie.d
 
 # Each subdirectory must supply rules for building sources it contributes
 %.o: %.cpp
@@ -43,10 +43,10 @@ USER_OBJS :=
 LIBS := -lwiringPi
 
 # All Target
-all: DisplayNixie
+all: nixie
 
 # Specific Targets
-DisplayNixie: $(CPP_SRCS) $(OBJS) $(USER_OBJS)
+nixie: $(CPP_SRCS) $(OBJS) $(USER_OBJS)
 	@echo 'Building target 'nixie' (original: $@)'
 	@echo 'Invoking: Cross G++ Linker'
 	g++  -o "./nixie" $(OBJS) $(USER_OBJS) $(LIBS)
