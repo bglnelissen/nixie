@@ -60,7 +60,6 @@ sudo vim /etc/systemd/system/nixie.service
 
 ```
 [Unit]
-Discription=Start Nixie clock at boot
 After=network.target
 StartLimitIntervalSec=0
 
@@ -70,10 +69,6 @@ RestartSec=2
 ExecStart=/home/pi/bin/nixie
 User=pi
 
-[Timer]
-OnBootSec=5
-OnUnitInactiveSec=1s
-
 [Install]
 WantedBy=multi-user.target
 ```
@@ -81,10 +76,11 @@ WantedBy=multi-user.target
 Start me up
 
 ```
-systemctl enable nixie.service
-systemctl start nixie.service
-systemctl restart nixie.service
-systemctl daemon-reload
+sudo systemctl enable nixie.service
+sudo systemctl start nixie.service
+sudo systemctl stop nixie.service
+sudo systemctl restart nixie.service
+sudo systemctl daemon-reload
 
 # log and debug:
 journalctl -u nixie.service
