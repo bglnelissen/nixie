@@ -67,7 +67,7 @@ StartLimitIntervalSec=0
 Restart=always
 RestartSec=2
 ExecStart=/home/bas/bin/nixie
-User=pi
+User=bas
 
 [Install]
 WantedBy=multi-user.target
