@@ -66,7 +66,7 @@ StartLimitIntervalSec=0
 [Service]
 Restart=always
 RestartSec=2
-ExecStart=/home/pi/bin/nixie
+ExecStart=/home/bas/bin/nixie
 User=pi
 
 [Install]
