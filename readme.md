@@ -85,3 +85,9 @@ sudo systemctl daemon-reload
 # log and debug:
 journalctl -u nixie.service
 ```
+## Compile the cpp after modification
+
+```
+cd ~/nixie && ls
+g++ -o displaytest display.cpp -lwiringPi
+```
